@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 mongoose.connect("mongodb+srv://ClinJS:Clinton97@cluster0.8gv1alh.mongodb.net/todolistDB?retryWrites=true&w=majority", {useNewUrlParser: true});
+ 
 const itemSchema = {
   name: String
 };
@@ -150,11 +151,11 @@ app.get("/about", function(req, res){
 });
 
 
-let port = process.env.PORT;
-if (port === null || port === " "){
-  port = 3000;
-}
+// let port = process.env.PORT;
+// if (port === null || port === " "){
+//   port = 3000;
+// }
 
-app.listen(port, function() {
+app.listen(3000, function() {
   console.log("Server has started successfully.");
 });
